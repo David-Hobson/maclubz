@@ -30,6 +30,12 @@ app.get("/", function(req, res){
 	});
 });
 
+app.get("/results", function(req, res){
+	Team.find().sort({name: 1}).exec(function(err, allTeams){
+		res.render("results", {teams: allTeams});
+	});
+});
+
 app.get("/team/:id", function(req, res){
 	res.render("viewteam");
 });
