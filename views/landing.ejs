@@ -11,13 +11,29 @@
 <body>
 	<div class="jumbotron jumbotron-fluid text-center d-flex align-items-center m-0">
 		<img class="graphic-1" src="images/graphic-1.png">
-		<div class="container">
-			<h1 class="display-1 landing-title">MACLUBZ</h1>
+		<div class="container title-area">
+			<h1 class="display-1 landing-title hide">MACLUBZ</h1>
 			<div class="search-area">
 				<i class="search-icon fas fa-search fa-2x"></i>
 				<input class="search-box" type="text" placeholder="Search for club...">
 			</div>
+			<div class="row search-results mt-5">
+				<% teams.forEach(function(team) { %>
+				<div class="col p-3">
+					<div class="card">
+						<img class="card-img-top" src="<%= team.mainImage %>" alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title"><%= team.name %></h5>
+							<hr class="hr-maroon">
+							<p class="card-text"><%= team.flavourText %></p>
+							<p class="card-text"><small class="text-muted"><a href="#"><i class="far fa-envelope"></i> <%=  team.email %></a></small></p>
+						</div>
+					</div>
+				</div>
+				<% });%> 
+			</div>
 		</div>
+		<h1 class="login" data-toggle="modal" data-target="#exampleModal">LOGIN</h1>
 		<img class="graphic-2" src="images/graphic-2.png">
 	</div>
 
@@ -66,77 +82,48 @@
 					</div>
 				</div>
 			</div>
+	
+			<% teams.forEach(function(team) { %>
 			<div class="col-4 p-3">
 				<div class="card">
-				  <img class="card-img-top" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=581511fae3d6e46d55eb0b6f3d86b69d&auto=format&fit=crop&w=1650&q=80" alt="Card image cap">
-				  <div class="card-body">
-				    <h5 class="card-title">Software Engineering Society</h5>
-				    <hr class="hr-maroon">
-				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				    <p class="card-text"><small class="text-muted"><a href="#"><i class="far fa-envelope"></i> software@mcmaster.ca</a></small></p>
-				  </div>
+					<img class="card-img-top" src="<%= team.mainImage %>" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title"><%= team.name %></h5>
+						<hr class="hr-maroon">
+						<p class="card-text"><%= team.flavourText %></p>
+						<p class="card-text"><small class="text-muted"><a href="#"><i class="far fa-envelope"></i> <%=  team.email %></a></small></p>
+					</div>
 				</div>
 			</div>
-			<div class="col-4 p-3">
-				<div class="card">
-				  <img class="card-img-top" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=581511fae3d6e46d55eb0b6f3d86b69d&auto=format&fit=crop&w=1650&q=80" alt="Card image cap">
-				  <div class="card-body">
-				    <h5 class="card-title">Software Engineering Society</h5>
-				    <hr class="hr-maroon">
-				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				    <p class="card-text"><small class="text-muted"><a href="#"><i class="far fa-envelope"></i> software@mcmaster.ca</a></small></p>
-				  </div>
+			<% });%> 
+		</div>
+	</div>
+
+	<!-- MODAL FOR LOGIN -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content text-center">
+				<div class="modal-header">
+					<h2 class="modal-title text-center" id="exampleModalLabel">Login</h2>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
 				</div>
-			</div>
-			<div class="col-4 p-3">
-				<div class="card">
-				  <img class="card-img-top" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=581511fae3d6e46d55eb0b6f3d86b69d&auto=format&fit=crop&w=1650&q=80" alt="Card image cap">
-				  <div class="card-body">
-				    <h5 class="card-title">Software Engineering Society</h5>
-				    <hr class="hr-maroon">
-				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				    <p class="card-text"><small class="text-muted"><a href="#"><i class="far fa-envelope"></i> software@mcmaster.ca</a></small></p>
-				  </div>
-				</div>
-			</div>
-			<div class="col-4 p-3">
-				<div class="card">
-				  <img class="card-img-top" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=581511fae3d6e46d55eb0b6f3d86b69d&auto=format&fit=crop&w=1650&q=80" alt="Card image cap">
-				  <div class="card-body">
-				    <h5 class="card-title">Software Engineering Society</h5>
-				    <hr class="hr-maroon">
-				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				    <p class="card-text"><small class="text-muted"><a href="#"><i class="far fa-envelope"></i> software@mcmaster.ca</a></small></p>
-				  </div>
-				</div>
-			</div>
-			<div class="col-4 p-3">
-				<div class="card">
-				  <img class="card-img-top" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=581511fae3d6e46d55eb0b6f3d86b69d&auto=format&fit=crop&w=1650&q=80" alt="Card image cap">
-				  <div class="card-body">
-				    <h5 class="card-title">Software Engineering Society</h5>
-				    <hr class="hr-maroon">
-				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				    <p class="card-text"><small class="text-muted"><a href="#"><i class="far fa-envelope"></i> software@mcmaster.ca</a></small></p>
-				  </div>
-				</div>
-			</div>
-			<div class="col-4 p-3">
-				<div class="card">
-				  <img class="card-img-top" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=581511fae3d6e46d55eb0b6f3d86b69d&auto=format&fit=crop&w=1650&q=80" alt="Card image cap">
-				  <div class="card-body">
-				    <h5 class="card-title">Software Engineering Society</h5>
-				    <hr class="hr-maroon">
-				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				    <p class="card-text"><small class="text-muted"><a href="#"><i class="far fa-envelope"></i> software@mcmaster.ca</a></small></p>
-				  </div>
+				<div class="modal-body">
+					<i class="fas fa-user username-icon"></i>
+					<input class="login-input m-2" type="text" placeholder="Username">
+					<br>
+					<i class="fas fa-key password-icon"></i>
+					<input class="login-input m-2" type="text" placeholder="Password">
+					<br>
+					<button class="btn-login mt-1">Login</button>
 				</div>
 			</div>
 		</div>
-		
 	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script type="text/javascript" src="scripts/landing-search.js"></script>
 </html>
