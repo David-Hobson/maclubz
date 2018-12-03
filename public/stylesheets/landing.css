@@ -1,5 +1,5 @@
 .jumbotron {
-	height: 100vh;
+	height: 80vh;
 	background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), 
 	url("../images/landing-background.jpg");
 	background-size: cover;
@@ -55,7 +55,7 @@ body{
 
 .graphic-2 {
 	position: absolute;
-	top: 60%;
+	top: 40%;
 	left: 80%;
 }
 

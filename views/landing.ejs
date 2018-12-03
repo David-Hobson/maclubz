@@ -12,14 +12,14 @@
 	<div class="jumbotron jumbotron-fluid text-center d-flex align-items-center m-0">
 		<img class="graphic-1" src="images/graphic-1.png">
 		<div class="container title-area">
-			<h1 class="display-1 landing-title hide">MACLUBZ</h1>
+			<h1 class="display-1 landing-title">MACLUBZ</h1>
 			<div class="search-area">
 				<i class="search-icon fas fa-search fa-2x"></i>
 				<input class="search-box" type="text" placeholder="Search for club...">
 			</div>
-			<div class="row search-results mt-5">
+			<div class="row search-results mt-1 text-left hide">
 				<% teams.forEach(function(team) { %>
-				<div class="col p-3">
+				<div class="col-4 p-3">
 					<div class="card">
 						<img class="card-img-top" src="<%= team.mainImage %>" alt="Card image cap">
 						<div class="card-body">
