@@ -12,9 +12,11 @@ letters.each(function(index, letter){
 let searchBox = $(".search-box");
 
 searchBox.keyup(function(){
-	$(".landing-title").addClass("hide");
+	// $(".landing-title").addClass("hide");
+	// $(".search-results").removeClass("hide");
 
-	if(searchBox.val() == ""){
-		$(".landing-title").removeClass("hide");
-	}
+	// if(searchBox.val() == ""){
+	// 	$(".landing-title").removeClass("hide");
+	// 	$(".search-results").addClass("hide");
+	// }
 });
