@@ -32,7 +32,7 @@ app.get("/", function(req, res){
 
 app.get("/results", function(req, res){
 	Team.find().sort({name: 1}).exec(function(err, allTeams){
-		res.render("results", {teams: allTeams});
+		res.render("results", {teams: allTeams, query: req.query.query});
 	});
 });
 

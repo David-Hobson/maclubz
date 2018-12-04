@@ -1,5 +1,5 @@
 .jumbotron {
-	height: 80vh;
+	height: 85vh;
 	background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), 
 	url("../images/landing-background.jpg");
 	background-size: cover;
@@ -74,6 +74,7 @@ body{
 
 .clubs-display-section {
 	background-color: #EDEDED;
+	min-height: 800px;
 }
 
 .card-title{
@@ -96,15 +97,6 @@ body{
 	cursor: pointer;
 }
 
-.card-deck {
-  @include media-breakpoint-only(lg) {
-    column-count: 3;
-  }
-  @include media-breakpoint-only(xl) {
-    column-count: 3;
-  }
-}
-
 .hr-maroon {
 	background-color: #7A003C;
 	width: 30%;
@@ -124,6 +116,7 @@ a:hover {
 	width: 100%;
 	font-size: 20px;
 	background-color: white;
+	outline-color: #7A003C;
 }
 
 .letter-select:hover{
@@ -210,8 +203,7 @@ a:hover {
 }
 
 
-
-.test {
+.highlight {
 	color: #7A003C;
 	font-weight: bold;
 }
@@ -220,14 +212,10 @@ a:hover {
 	display: none !important;
 }
 
-.search-results {
-	display: flex;
-	height: 500px;
-    overflow-x: auto;
-	background-color: white;
-	border-radius: 10px;
+.no-results {
+	font-size: 60px;
 }
 
-.search-results .col {
-	width: 1000px !important;
+.non-search {
+	display: none !important;
 }
