@@ -45,7 +45,7 @@
  * Dropdown
  */
 
-.dropdown {
+/* .dropdown {
     font-family: 'Roboto';
     font-size: 0.95em;
     position: absolute;
@@ -81,7 +81,7 @@
 
 .dropdown-item:active {
     text-decoration: underline;
-}
+} */
 
 /*
  * Content (misc)
