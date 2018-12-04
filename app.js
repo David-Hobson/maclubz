@@ -8,7 +8,7 @@ var passportLocalMongoose = require("passport-local-mongoose");
 var expressSession = require("express-session");
 
 var Team = require("./models/Team");
-var User = require("./models/User");
+var User = require("./models/user");
 
 mongoose.connect("mongodb://main_user:maclubzrules69@ds115752.mlab.com:15752/maclubz");
 
