@@ -68,8 +68,7 @@ body {
 }
 
 .section-club-highlight {
-  background: linear-gradient(45deg, #cedce7 49%,#596a72 100%);
-  /* background: linear-gradient(135deg, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%); */
+    background-color: lightgray;
 }
 
 .section-club-description {
@@ -81,17 +80,16 @@ body {
 }
 
 .section-gallery {
+    padding-left: 10%;
     background-color: #6d1e31;
-  /* background: linear-gradient(45deg, #cedce7 49%,#596a72 100%); */
 }
 
 .section-calendar {
-  /* background: linear-gradient(135deg, #cedce7 49%,#596a72 100%); */
   padding-bottom: 50px;
 }
 
 .section-contact {
-  background: linear-gradient(45deg, #cedce7 49%,#596a72 100%);
+  background-color: lightgray;
   padding-bottom: 50px;
 }
 
@@ -103,7 +101,8 @@ body {
 .contact-entry {
   width: 300px;
   border-radius: 20px;
-  font-weight: 700;
+  font-weight: 500;
+  color: black;
 }
 
 .club-quotes {
@@ -138,7 +137,7 @@ body {
 .section-title-white {
     font-family: 'Oswald', sans-serif;
     padding: 0;
-    padding-left: 50px;
+    padding-left: 10%;
     margin-top: 20px;
     color: white;
 }
@@ -164,6 +163,17 @@ body {
   color: gold;
   background-color: gold;
 }
+
+.section-title-divider-gallery {
+    border: none;
+    height: 5px;
+    width: 30%;
+    margin-left: 10%;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: gold;
+    background-color: gold;
+  }
 
 .section-title-divider-contact {
     border: none;
@@ -192,7 +202,6 @@ body {
   border-width:0;
   width: 100%;
   height: 45em;
-  padding-left: 10%;
   margin-top: 1%;
   frameborder: 0;
   scrolling: no;
@@ -208,7 +217,7 @@ body {
  */
 
 .carousel {
-  margin: 40px 0 4rem 10%;
+  margin: 40px 100px 4rem 125px;
 }
 
 /* Declare heights because of positioning of img element */
@@ -240,6 +249,7 @@ body {
   border-radius: 15px;
 }
 
+
 .carousel-control-next{
-  left: 95%;
+  left: 87%;
 }
