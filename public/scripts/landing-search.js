@@ -1,6 +1,7 @@
 let letters = $(".letter-select");
 let category = $(".category");
 let teams = $(".teams");
+let clearLetter = $(".clear-letter");
 
 letters.each(function(index, letter){
 	$(letter).click(function(){
@@ -12,11 +13,20 @@ letters.each(function(index, letter){
 
 category.change(function(){
 	categorySearch($(this).val());
-})
+});
+
+clearLetter.click(function(){
+	letters.removeClass("highlight");
+	teams.removeClass("non-search");
+	clearLetter.addClass("hide");
+	category.val("Select Category");
+	$(".no-results").addClass("hide");
+});
 
 
 function letterSearch(letter){
 	category.val("Select Category");
+
 	teams.each(function(index, team){
 		if(this.getAttribute("name").toLowerCase()[0] == letter.toLowerCase()){
             $(this).removeClass("non-search");
@@ -30,6 +40,8 @@ function letterSearch(letter){
     }else{
     	$(".no-results").addClass("hide");
     }
+
+    clearLetter.removeClass("hide");
 }	
 
 function categorySearch(category){
