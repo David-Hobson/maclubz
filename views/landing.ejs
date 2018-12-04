@@ -1,1 +1,129 @@
-<h1>MACLUBZ!</h1>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Maclubz</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="stylesheets/landing.css">
+	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/d-din" type="text/css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Oswald:300,400" rel="stylesheet">
+</head>
+<body>
+	<div class="jumbotron jumbotron-fluid text-center d-flex align-items-center m-0">
+		<img class="graphic-1" src="images/graphic-1.png">
+		<div class="container title-area">
+			<h1 class="display-1 landing-title">MACLUBZ</h1>
+			<div class="search-area">
+				<i class="search-icon fas fa-search fa-2x"></i>
+				<input class="search-box" type="text" placeholder="Search for club...">
+			</div>
+			<div class="row search-results mt-1 text-left hide">
+				<% teams.forEach(function(team) { %>
+				<div class="col-4 p-3">
+					<div class="card">
+						<img class="card-img-top" src="<%= team.mainImage %>" alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title"><%= team.name %></h5>
+							<hr class="hr-maroon">
+							<p class="card-text"><%= team.flavourText %></p>
+							<p class="card-text"><small class="text-muted"><a href="#"><i class="far fa-envelope"></i> <%=  team.email %></a></small></p>
+						</div>
+					</div>
+				</div>
+				<% });%> 
+			</div>
+		</div>
+		<h1 class="login" data-toggle="modal" data-target="#exampleModal">LOGIN</h1>
+		<img class="graphic-2" src="images/graphic-2.png">
+	</div>
+
+	<div class="container-fluid">
+		<div class="row p-5 clubs-display-section">
+			<div class="col-12 pb-3">
+				<div class="row">
+					<div class="col-8">
+						<h1 class="section-title">Clubs</h1>
+						<p class="alpha-sort">
+							<span class="letter-select">A</span>
+							<span class="letter-select">B</span>
+							<span class="letter-select">C</span>
+							<span class="letter-select">D</span>
+							<span class="letter-select">E</span>
+							<span class="letter-select">F</span>
+							<span class="letter-select">G</span>
+							<span class="letter-select">H</span>
+							<span class="letter-select">I</span>
+							<span class="letter-select">J</span>
+							<span class="letter-select">K</span>
+							<span class="letter-select">L</span>
+							<span class="letter-select">M</span>
+							<span class="letter-select">N</span>
+							<span class="letter-select">O</span>
+							<span class="letter-select">P</span>
+							<span class="letter-select">Q</span>
+							<span class="letter-select">R</span>
+							<span class="letter-select">S</span>
+							<span class="letter-select">T</span>
+							<span class="letter-select">U</span>
+							<span class="letter-select">V</span>
+							<span class="letter-select">W</span>
+							<span class="letter-select">X</span>
+							<span class="letter-select">Y</span>
+							<span class="letter-select">Z</span>
+						</p>
+					</div>
+					<div class="col-4 d-flex align-items-end mb-3">
+						<select class="category">
+							<option>Select Category</option>
+							<option>Academic</option>
+							<option>Sports</option>
+							<option>Other</option>
+						</select>
+					</div>
+				</div>
+			</div>
+	
+			<% teams.forEach(function(team) { %>
+			<div class="col-4 p-3">
+				<div class="card">
+					<img class="card-img-top" src="<%= team.mainImage %>" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title"><%= team.name %></h5>
+						<hr class="hr-maroon">
+						<p class="card-text"><%= team.flavourText %></p>
+						<p class="card-text"><small class="text-muted"><a href="#"><i class="far fa-envelope"></i> <%=  team.email %></a></small></p>
+					</div>
+				</div>
+			</div>
+			<% });%> 
+		</div>
+	</div>
+
+	<!-- MODAL FOR LOGIN -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content text-center">
+				<div class="modal-header">
+					<h2 class="modal-title text-center" id="exampleModalLabel">Login</h2>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<i class="fas fa-user username-icon"></i>
+					<input class="login-input m-2" type="text" placeholder="Username">
+					<br>
+					<i class="fas fa-key password-icon"></i>
+					<input class="login-input m-2" type="text" placeholder="Password">
+					<br>
+					<button class="btn-login mt-1">Login</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script type="text/javascript" src="scripts/landing-search.js"></script>
+</html>

@@ -7,6 +7,8 @@ var LocalStrategy = require("passport-local");
 var passportLocalMongoose = require("passport-local-mongoose");
 var expressSession = require("express-session");
 
+var Team = require("./models/team");
+
 app.use(bodyParser.urlencoded({extender: true}));
 app.use(express.static(__dirname + "/public"));
 app.use(expressSession({
@@ -20,8 +22,18 @@ app.use(passport.session());
 
 app.set("view engine", "ejs");
 
+mongoose.connect("mongodb://main_user:maclubzrules69@ds115752.mlab.com:15752/maclubz");
+
 app.get("/", function(req, res){
-	res.render("landing");
+	Team.find().sort({name: 1}).exec(function(err, allTeams){
+		res.render("landing", {teams: allTeams});
+	});
+});
+
+app.get("/results", function(req, res){
+	Team.find().sort({name: 1}).exec(function(err, allTeams){
+		res.render("results", {teams: allTeams});
+	});
 });
 
 app.get("/team/:id", function(req, res){
