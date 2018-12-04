@@ -219,3 +219,11 @@ a:hover {
 .non-search {
 	display: none !important;
 }
+
+.non-link {
+	all: unset;
+}
+
+.non-link:hover {
+	all: unset;
+}
