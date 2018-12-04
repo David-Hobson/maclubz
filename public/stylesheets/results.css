@@ -87,3 +87,11 @@ a:hover {
 .no-results {
 	font-size: 60px;
 }
+
+.non-link {
+	all: unset;
+}
+
+.non-link:hover {
+	all: unset;
+}

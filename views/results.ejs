@@ -12,7 +12,9 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-12 d-flex p-3">
-				<h1 class="display-1 results-title">MACLUBZ</h1>
+				<a class="non-link" href="/">
+					<h1 class="display-1 results-title">MACLUBZ</h1>
+				</a>
 				<div class="search-area w-75 mt-3">
 					<i class="search-icon fas fa-search fa-2x"></i>
 					<input class="search-box" type="text" placeholder="Search for club..." value="<%= query %>">
@@ -22,15 +24,17 @@
 		<div class="row p-3">
 			<% teams.forEach(function(team) { %>
 			<div class="col-3 p-3 teams" tags="<%= team.tags %>">
-				<div class="card">
-					<img class="card-img-top" src="<%= team.mainImage %>" alt="Card image cap">
-					<div class="card-body">
-						<h5 class="card-title"><%= team.name %></h5>
-						<hr class="hr-maroon">
-						<p class="card-text"><%= team.flavourText %></p>
-						<p class="card-text"><small class="text-muted"><a href="#"><i class="far fa-envelope"></i> <%=  team.email %></a></small></p>
+				<a class="non-link" href="teams/<%= team._id %>">
+					<div class="card">
+						<img class="card-img-top" src="<%= team.mainImage %>" alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title"><%= team.name %></h5>
+							<hr class="hr-maroon">
+							<p class="card-text"><%= team.flavourText %></p>
+							<p class="card-text"><small class="text-muted"><a href="#"><i class="far fa-envelope"></i> <%=  team.email %></a></small></p>
+						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 			<% });%>
 			<div class="col-12">
