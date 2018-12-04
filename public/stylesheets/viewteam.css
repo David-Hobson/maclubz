@@ -1,111 +1,66 @@
-.sidebar {
-  top: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 100; /* Behind the navbar */
-  padding: 0 0 0; /* Height of navbar */
-  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
-  background-color: #6d1e31;
+/*
+ * Dropdown
+ */
+
+.dropdown {
+    position: absolute;
+    top: 5%;
+    left: 1%;
 }
 
-.sidebar-sticky {
-  position: relative;
-  top: 0;
-  height: 100%;
-  padding-top: .5rem;
-  overflow-x: hidden;
-  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-  background-color: #6d1e31;
+.dropdown-toggle {
+    width: 175px;
 }
 
-@supports ((position: -webkit-sticky) or (position: sticky)) {
-  .sidebar-sticky {
-    position: -webkit-sticky;
-    position: sticky;
-  }
+.dropdown-toggle,
+.dropdown .show
+ {
+    border-radius: 15px;
 }
 
-.sidebar .nav-item{
-  padding-left: 30px;
+.dropdown-toggle,
+.dropdown-item,
+.dropdown-menu {
+    background-color: #6d1e31;
+    color: white;
 }
 
-.sidebar .nav-link {
-  font-weight: 500;
-  color: white;
-  padding: 20px;
+.dropdown-toggle:hover,
+.dropdown-menu:hover,
+.dropdown-item:hover {
+    color: gold;
+    background-color: #6d1e31;
 }
 
-.sidebar .nav-link.active {
-  text-decoration: underline;
-}
-
-.sidebar .nav-link:hover{
-  color: gold;
+.dropdown-item:active {
+    text-decoration: underline;
 }
 
 .nav-icon {
-  padding-right: 1em;
+    padding-right: 1em;
+    font-size: 15px;
 }
-
-.sidebar-header {
-  font-size: 1em;
-  text-transform: uppercase;
-  margin-left: 5px;
-  margin-bottom: 0;
-}
-
-.sidebar-title{
-  color: white;
-  font-size: 1.5em;
-  font-weight: 500;
-  padding-top: 10px;
-  text-align: center;
-}
-
-.sidebar-main{
-  margin: 0;
-}
-
-.sidebar .sidebar-item:hover{
-  color: gold;
-}
-
-.sidebar .social-item {
-  font-weight: 500;
-  color: white;
-  padding-left: 30px;
-}
-
-.sidebar .contact-info {
-  font-weight: 500;
-  color: white;
-}
-
 
 /*
  * Content (misc)
  */
 
 body {
-  font-size: .875rem;
+  color:#7F7F7F;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
   background-color: white;
 }
-
-.club-header {
-  margin-bottom: 0px;
-  height: 400px;
-  width: 100%;
-  background-color: white;
-  background: url("/assets/mcmaster-grey-wide.jpg") no-repeat;
-  background-size: 100%;
-}
-
 
 /*
  * Main Content
  */
 .row .content {
   margin-bottom: 50px;
+}
+
+.section {
+  padding-left: 15%;
 }
 
 .section-club-highlight {
@@ -122,7 +77,8 @@ body {
 }
 
 .section-gallery {
-  background: linear-gradient(45deg, #cedce7 49%,#596a72 100%);
+    background-color: #6d1e31;
+  /* background: linear-gradient(45deg, #cedce7 49%,#596a72 100%); */
 }
 
 .section-calendar {
@@ -137,11 +93,13 @@ body {
 
 .sub-section-contact {
   padding-top: 10px;
+  padding-right: 50px;
 }
 
 .contact-entry {
   width: 300px;
   border-radius: 20px;
+  font-weight: 700;
 }
 
 .club-quotes {
@@ -163,64 +121,54 @@ body {
  * Titles
  */
 
-.page-title {
-  padding-top: 50px;
-  font-weight: 600;
-  font-size: 75px;
-  color: #6d1e31;
-  text-shadow: 1px 1px 0px gold;
-}
-
 .section-title {
+  color: black;
+  font-family: 'Oswald', sans-serif;
   padding: 0;
   padding-left: 50px;
   margin-top: 20px;
 }
 
-.club-title {
-  padding-left: 50px;
+.section-title-white {
+    font-family: 'Oswald', sans-serif;
+    padding: 0;
+    padding-left: 50px;
+    margin-top: 20px;
+    color: white;
 }
+
+.section-title-contact {
+    font-family: 'Oswald', sans-serif;
+    color: black;
+    padding-top: 30px;
+}
+
 
 /*
  * Dividers
  */
- .sidebar-divider {
-  border: none;
-  height: 2px;
-  width: 75%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  background-color: gold;
-}
-
-.sidebar-contact-divider {
-  border: none;
-  height: 1px;
-  width: 100%;
-  margin-top: 10px;
-  background-color: white;
-}
-
-.title-divider {
-  border: none;
-  height: 3px;
-  width: 50%;
-  margin-left: 25%;
-  margin-top: 0;
-  color: gold;
-  background-color: gold;
-}
 
 .section-title-divider {
   border: none;
-  height: 3px;
+  height: 5px;
+  width: 30%;
   margin-left: 50px;
   margin-top: 0;
   margin-bottom: 20px;
   color: gold;
   background-color: gold;
 }
+
+.section-title-divider-contact {
+    border: none;
+    height: 3px;
+    width: 50%;
+    left: 50%;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: gold;
+    background-color: gold;
+  }
 
 .section-divider {
   border: none;
@@ -229,19 +177,6 @@ body {
   color: gold;
   background-color: #585253;
 }
-
-#club-title-divider {
-  width: 50%;
-}
-
-#description-title-divider {
-  width: 20%;
-}
-
-#events-title-divider {
-  width: 32%;
-}
-
 
 /*
  * Media
