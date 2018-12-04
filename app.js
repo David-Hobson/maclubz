@@ -36,8 +36,11 @@ app.get("/results", function(req, res){
 	});
 });
 
-app.get("/team/:id", function(req, res){
-	res.render("viewteam");
+app.get("/teams/:id", function(req, res){
+	Team.findById(req.params.id).exec(function(err, foundTeam){
+		res.render("viewteam", {team: foundTeam});	
+	});
+	
 });
 
 app.listen("8080", function(){
