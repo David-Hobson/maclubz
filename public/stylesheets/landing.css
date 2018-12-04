@@ -39,6 +39,7 @@ body{
 
 .search-box:focus{
 	outline: 0;
+	border: 1px solid #7A003C;
 }
 
 .search-icon{
@@ -126,6 +127,18 @@ a:hover {
 
 .letter-select:active{
 	color: #7A003C;
+}
+
+.clear-letter{
+	font-size: 15px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.clear-letter:hover{
+	color: #7A003C;
+	cursor: pointer;
 }
 
 .login {

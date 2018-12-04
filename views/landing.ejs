@@ -20,7 +20,13 @@
 				</form>
 			</div>
 		</div>
-		<h1 class="login" data-toggle="modal" data-target="#exampleModal">LOGIN</h1>
+		<% if(!currentUser) { %>
+		<!-- <% console.log(currentUser); %> -->
+			<h1 class="login" data-toggle="modal" data-target="#exampleModal">LOGIN</h1>
+		<% }else{ %>
+			<h1 class="login" data-toggle="modal" data-target="#exampleModal">Hello, <%= currentUser.username %></h1>
+		<% } %>
+		
 		<img class="graphic-2" src="images/graphic-2.png">
 	</div>
 
@@ -57,6 +63,7 @@
 							<span class="letter-select">X</span>
 							<span class="letter-select">Y</span>
 							<span class="letter-select">Z</span>
+							<span class="clear-letter hide"><i class="fas fa-times"></i> CLEAR</span>
 						</p>
 					</div>
 					<div class="col-4 d-flex align-items-end mb-3">
@@ -103,12 +110,14 @@
 				</div>
 				<div class="modal-body">
 					<i class="fas fa-user username-icon"></i>
-					<input class="login-input m-2" type="text" placeholder="Username">
-					<br>
-					<i class="fas fa-key password-icon"></i>
-					<input class="login-input m-2" type="password" placeholder="Password">
-					<br>
-					<button class="btn-login mt-1">Login</button>
+					<form action="/login" method="POST" enctype="multipart/form-data">
+						<input class="login-input m-2" type="text" placeholder="Username" name="username">
+						<br>
+						<i class="fas fa-key password-icon"></i>
+						<input class="login-input m-2" type="password" placeholder="Password" name="password">
+						<br>
+						<button class="btn-login mt-1" type="submit">Login</button>
+					</form>
 				</div>
 			</div>
 		</div>
