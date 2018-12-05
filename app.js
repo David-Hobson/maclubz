@@ -29,7 +29,7 @@ app.use(function(req, res, next){
 
 app.set("view engine", "ejs");
 
-mongoose.connect("mongodb://main_user:maclubzrules69@ds115752.mlab.com:15752/maclubz");
+mongoose.connect("mongodb://" + process.env.DB_USER + ":"+ process.env.DB_PASSWORD +"@ds115752.mlab.com:15752/maclubz");
 
 passport.use(new LocalStrategy(User.authenticate()));
 
@@ -72,6 +72,6 @@ app.get("/teams/:id", function(req, res){
 	
 });
 
-app.listen("8080", function(){
+app.listen(process.env.PORT, function(){
 	console.log("Maclubz server has started...");
 });
