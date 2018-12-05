@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Maclubz</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="stylesheets/results.css">
+	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/d-din" type="text/css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Oswald:300,400" rel="stylesheet">
+</head>
+<body>
+	<div class="container-fluid p-4">
+		<div class="row">
+			<div class="col-12 d-flex">
+				<a class="non-link" href="/">
+					<h1 class="display-1 results-title">MACLUBZ</h1>
+				</a>
+				<div class="search-area w-75 mt-3">
+					<i class="search-icon fas fa-search fa-2x"></i>
+					<input class="search-box" type="text" placeholder="Search for club..." value="<%= query %>">
+				</div>	
+			</div>
+		</div>
+		<div class="row p-3">
+			<% teams.forEach(function(team) { %>
+			<div class="col-3 p-3 teams" tags="<%= team.tags %>">
+				<a class="non-link" href="teams/<%= team._id %>">
+					<div class="card">
+						<img class="card-img-top" src="<%= team.mainImage %>" alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title"><%= team.name %></h5>
+							<hr class="hr-maroon">
+							<p class="card-text"><%= team.flavourText %></p>
+							<p class="card-text"><small class="text-muted"><a href="#"><i class="far fa-envelope"></i> <%=  team.email %></a></small></p>
+						</div>
+					</div>
+				</a>
+			</div>
+			<% });%>
+			<div class="col-12">
+				<h1 class="hide no-results text-center">NO RESULTS</h1>	
+			</div> 
+		</div>
+	</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script type="text/javascript" src="scripts/results-search.js"></script>
+</html>
