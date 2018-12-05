@@ -8,8 +8,9 @@ var teamSchema = new mongoose.Schema({
     description: String,
     carouselImages: [String],
     flavourText: String,
-    socialMedia: [[String, String]],
+    socialMedia: [String],
     quotes: [[String, String]],
+    calendar: String,
     tags: String
 });
 
