@@ -18,34 +18,85 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald:300,400" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
 
-</head>
+  </head>
 
-<body>
-    <div class="dropdown show">
-        <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Navigation
-        </a>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" href="#description"><i class="nav-icon far fa-list-alt"></i>Club Description</a>
-            <a class="dropdown-item" href="#gallery"><i class="nav-icon far fa-images"></i>Photo Gallery</a>
-            <a class="dropdown-item" href="#events"><i class="nav-icon fas fa-calendar-alt"></i>Calendar of Events</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/"><i class="nav-icon fas fa-home"></i>Return to Maclubz Homepage</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="mailto:ses@noreply.com"><i class="nav-icon fas fa-envelope"></i>Send us an email</a>
+    <body>
+        <!-- <div class="dropdown show">
+            <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Navigation
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="#description"><i class="nav-icon far fa-list-alt"></i>Club Description</a>
+                <a class="dropdown-item" href="#gallery"><i class="nav-icon far fa-images"></i>Photo Gallery</a>
+                <a class="dropdown-item" href="#events"><i class="nav-icon fas fa-calendar-alt"></i>Calendar of Events</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/"><i class="nav-icon fas fa-home"></i>Return to Maclubz Homepage</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="mailto:ses@noreply.com"><i class="nav-icon fas fa-envelope"></i>Send us an email</a>
+            </div>
+        </div> -->
+        
+        <div>
+            <img class="nav-menu-img" src="/images/graphic-3.png">
         </div>
-    </div>
 
-    <main class="container-fluid align-self-start">   
-        <div class="row section section-club-highlight">
+        <div class="nav-menu text-center sidebar">
+            <div class="sidebar-title">Sections</div>
+            <hr class="sidebar-divider">
+            <ul><li class="nav-item">
+                    <a class="nav-link active" href="#description">
+                      <i class="nav-icon far fa-list-alt"></i>Description
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#gallery">
+                      <i class="nav-icon far fa-images"></i>Photos
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#events">
+                      <i class="nav-icon fas fa-calendar-alt"></i>Calendar
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/">
+                        <i class="nav-icon fas fa-home"></i>Maclubz Homepage
+                      </a>
+                    </li></ul>
+                  <div class="sidebar-title">Connect with Us</div>
+      
+                  <hr class="sidebar-divider">      
+                  <div class="social-item">
+                      <a class="nav-link" href="#">
+                          <i class="nav-icon fas fa-envelope"></i>Email
+                      </a>
+                  </div>
+      
+                  <div class="social-item">
+                      <a class="nav-link" href="#">
+                        <i class="nav-icon fab fa-twitter-square"></i>Twitter
+                      </a>
+                  </div>
+                  <div class="social-item">
+                      <a class="nav-link" href="#">
+                        <i class="nav-icon fab fa-facebook"></i>Facebook
+                      </a>
+                  </div>
+        </div>
+
+        <main class="container-fluid align-self-start">   
+            <div class="row section section-club-highlight">
             <div class="col-md-10">
                 <div>
                     <h1 class="display-5 section-title"><%= team.name %></h1>
                     <hr class="section-title-divider">
                 </div>
                 <div class="row content">
-                    <div class="col-md-6 text-center"><img class="banner" src="<%= team.mainImage %>"></div>
-                    <div class="col-md-6 text-left club-quotes">
+
+                    <div class="col-md-1"></div>
+                    <div class="col-md-4 text-center"><img class="banner" src="/images/small_SEC.png"></div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 text-left club-quotes">
                         "Software design is for everyone, young and old, male and female"
                         <div class="quote-author">- Jayanthi Uthayakumar, Club President</div>
                         "The Software Engineering Society is full of talent, technology, and learning"
@@ -80,12 +131,12 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="/assets/open_source_img.jpg">
+                        <img class="d-block w-100" src="/images/open_source_img.jpg">
                         <!--Image source: nochallenge.net-->
                     </div>
 
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="/assets/ml-infographic.jpg">
+                        <img class="d-block w-100" src="/images/ml-infographic.jpg">
                         <!--Image source: Intel Developer Zone-->
                     </div>
 

@@ -1,8 +1,51 @@
 /*
+ * Sidebar
+ */
+.nav-item {
+  list-style-type: none;
+  margin-left: -10px;
+}
+
+.sidebar-item {
+  font-weight: 500;
+  color: white;
+}
+
+.sidebar .nav-link {
+  text-align: left;
+  font-weight: 500;
+  color: white;
+}
+
+.sidebar .nav-link.active {
+  text-decoration: underline;
+}
+
+.sidebar .nav-link:hover{
+  color: gold;
+}
+
+.nav-icon {
+  padding-right: 1em;
+  font-size: 15px;
+}
+
+.sidebar .social-item {
+  font-weight: 500;
+  color: white;
+  padding-left: 30px;
+}
+
+.sidebar .contact-info {
+  font-weight: 500;
+  color: white;
+}
+
+/*
  * Dropdown
  */
 
-.dropdown {
+/* .dropdown {
     font-family: 'Roboto';
     font-size: 0.95em;
     position: absolute;
@@ -38,12 +81,7 @@
 
 .dropdown-item:active {
     text-decoration: underline;
-}
-
-.nav-icon {
-    padding-right: 1em;
-    font-size: 15px;
-}
+} */
 
 /*
  * Content (misc)
@@ -120,11 +158,28 @@ body {
   margin-bottom: 9%;
 }
 
+.nav-menu {
+  position: absolute;
+  top: 58%;
+  left: 0;
+  height: 400px;
+  width: 250px;
+  padding-top: 2%;
+  color: white;
+  font-family: 'Roboto';
+  font-size: 0.95em;
+}
 
 
 /*
  * Titles
  */
+ .sidebar-title{
+  color: white;
+  font-size: 1.3em;
+  font-weight: 500;
+  text-align: center;
+}
 
 .section-title {
   color: black;
@@ -152,6 +207,14 @@ body {
 /*
  * Dividers
  */
+
+.sidebar-divider {
+  position: relative;
+  border: none;
+  height: 2px;
+  margin: 0 50px 0 50px;
+  background-color: gold;
+}
 
 .section-title-divider {
   border: none;
@@ -210,6 +273,14 @@ body {
 .banner {
   width: 80%;
   height: 250px;
+}
+
+.nav-menu-img {
+  position: absolute;
+  top: 57.75%;
+  left: 1%;
+  height: 400px;
+  width: 250px;
 }
 
 /*
