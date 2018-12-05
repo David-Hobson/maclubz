@@ -172,7 +172,9 @@
             <div class="row sub-section-contact">
                 <div class="col-md-6 contact-entry"><i class="nav-icon fas fa-envelope"></i> <%= team.email %></div>
                 <div class="col-md-6 contact-entry"><i class="nav-icon fas fa-envelope"></i>
-                    <input class="text-center contact-entry" placeholder="Subscribe to mailing list">
+                    <form action="/teams/<%= team._id %>" method="GET">
+                        <input class="text-center contact-entry" placeholder="Subscribe to mailing list">
+                    </form>
                 </div>
             </div>
         </div>
