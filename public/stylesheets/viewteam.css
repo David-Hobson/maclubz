@@ -160,14 +160,13 @@ body {
 
 .nav-menu {
   position: absolute;
-  top: 58%;
-  left: 0;
-  height: 400px;
+  height: 430px;
   width: 250px;
   padding-top: 2%;
   color: white;
   font-family: 'Roboto';
   font-size: 0.95em;
+  background-color: #7A003C;
 }
 
 
@@ -271,8 +270,8 @@ body {
 }
 
 .banner {
-  width: 80%;
-  height: 250px;
+  width: 100%;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.6)
 }
 
 .nav-menu-img {
@@ -323,4 +322,15 @@ body {
 
 .carousel-control-next{
   left: 87%;
+}
+
+.edit-page {
+  position: absolute;
+  left: 91%;
+  font-size: 30px;
+}
+
+.edit-page:hover{
+  color: black;
+  cursor: pointer;
 }
