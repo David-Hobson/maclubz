@@ -4,7 +4,8 @@
   "description": "Remake of clubza, which is a central hub of club & team information at McMaster University.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
