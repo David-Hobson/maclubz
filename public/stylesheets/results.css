@@ -1,15 +1,14 @@
 body{
 	overflow-x: hidden;
 	font-family: 'Oswald', sans-serif;
-	background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), 
-	url("../images/landing-background.jpg");
+	background: linear-gradient(rgba(255, 255, 255, 0.40), rgba(255, 255, 255, 0.40)), url("../images/landing-background.jpg");
 	background-size: cover;
 }
 
 .results-title {
 	color: #7A003C;
 	font-size: 70px;
-  	-webkit-text-stroke-width: 2px;
+  	-webkit-text-stroke-width: 3px;
   	-webkit-text-stroke-color: white;
 
    	font-family: 'DDINCondensedBold'; 
@@ -26,7 +25,7 @@ body{
 	padding: 5px;
 	padding-left: 5%;
 	border: 1px solid #5E6A71;
-	box-shadow: 0 10px 10px rgba(0,0,0,0.6);
+	/*box-shadow: 0 10px 10px rgba(0,0,0,0.6);*/
 	color: #5E6A71;
 	font-weight: 300;
 	caret-color: #7A003C;
@@ -75,4 +74,24 @@ a {
 
 a:hover {
 	color: #33001a;
+}
+
+.non-search {
+	display: none !important;
+}
+
+.hide {
+	display: none !important;
+}
+
+.no-results {
+	font-size: 60px;
+}
+
+.non-link {
+	all: unset;
+}
+
+.non-link:hover {
+	all: unset;
 }
